@@ -1,0 +1,132 @@
+
+const questions_container = document.querySelector(".questions-container");
+
+
+//
+
+
+// General knowledge
+const general_knowledge = [
+    {
+        question : "Who is the Prime Minister of India ? ",
+        option1 : "Rahul Gandhi ",
+        option2 : "Arvind Kejrival ",
+        option3 : "Narendra Modi",
+        option4 : "Amit Shah ",
+        correctAns : "Narendra Modi",
+    },
+
+    {
+        question : "Who established Mahabalipuram? ",
+        option1 : "Pallava ",
+        option2 : "Pandya ",
+        option3 : "Chola ",
+        option4 : "Chalukya ",
+        correctAns : "Pallava ",
+    },
+
+    {
+        question : '"Milind Panho" explaining the Buddhist doctrines in the form of a dialogue between Milind and his teacher Nagsena (the great Buddhist philosopher ) is in : ',
+        option1 : "Sanskrit ",
+        option2 : "Pali Language",
+        option3 : "Hindi ",
+        option4 : "Santhali ",
+        correctAns : "Pali Language",
+        
+    },
+
+    {
+        question : "In 1724 the state of Hyderabad was founded by : ",
+        option1 : "Nizam-ul-Mulk Asaf-Jah ",
+        option2 : "Azim Jah Bahadur ",
+        option3 : "Osman Ali Khan",
+        option4 : "Qamaruddin Khan ",
+        correctAns : "Osman Ali Khan",
+    },
+
+    {
+        question : "Mahatma Gandhi laid down four preconditions for a Satyagrahi (Passive Resistor) to fulfill - namely : ",
+        option1 : "Observe perfect Chastity, Adopt Poverty, Follow truth and Cultivated Fearlessness",
+        option2 : "Observe perfect Chastity, Gain Money, Follow truth and Cultivated Fearlessness",
+        option3 : "Observe perfect Chastity, Adopt Poverty, Follow truth and Cultivated Power",
+        option4 : "Observe perfect Chastity, Gain Money, Follow truth and Cultivated Power",
+        correctAns : "Observe perfect Chastity, Gain Money, Follow truth and Cultivated Power",
+    }
+];
+
+
+for(let i=0; i<general_knowledge.length; i++)
+{
+
+    let Question = `<div class="question-container">
+                            <h3 class="question">
+                                <span class="question-number">
+                                    ${i+1}]
+                                </span> 
+    
+                                <span>
+                                    ${general_knowledge[i].question}
+                                </span>
+                                
+                            </h3>
+                            <div class="options-container">
+                                <button class="option1 optns" data-value="${i}">${general_knowledge[i].option1}</button>
+                                <button class="option2 optns" data-value="${i}">${general_knowledge[i].option2}</button>
+                                <button class="option3 optns" data-value="${i}">${general_knowledge[i].option3}</button>
+                                <button class="option4 optns" data-value="${i}">${general_knowledge[i].option4}</button>
+                            </div>
+                     </div>`;
+
+                     
+                     questions_container.insertAdjacentHTML("beforeend",Question);
+
+}
+
+let count = 0;
+const all_btns = document.querySelectorAll('.optns');
+
+all_btns.forEach((btn) =>
+{
+    btn.addEventListener('click',() =>
+    {
+            if(btn.innerHTML == general_knowledge[btn.getAttribute('data-value')].correctAns)
+            {
+                btn.style.background = 'green';
+            }
+            else
+            {
+                all_btns.forEach((btn_click) =>
+                {
+                    if(btn_click.getAttribute('data-value') == btn.getAttribute('data-value'))
+                        {
+                            if(btn.innerHTML !== btn_click.innerHTML)
+                            {
+                                if(btn_click.innerHTML == general_knowledge[btn_click.getAttribute('data-value')].correctAns)
+                                {
+                                    btn_click.style.background = 'green';
+                                }
+                            }
+                            else
+                            {
+                                btn.style.background = 'red';
+
+                            }
+                                      
+                        }
+                }) 
+            }
+
+    })
+
+})
+
+console.log( "count : ",count);
+
+
+// for(let j=0; j<options.length; j++)
+// {
+//     options[j].addEventListener('click',()=>{
+//         options[j].classList.toggle("check");
+//     })
+// }
+        

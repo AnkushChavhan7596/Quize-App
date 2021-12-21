@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quize App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="loader">
+           <img src="./images/1475.gif" alt="">
+    </div>
+    
+    <div class="score-window">
+         <p class="score-window-text"></p>
+         <i class="fas fa-times"></i>
+    </div>
+
+
+    <div class="overlay">
+    </div>
+    
+    <div class="hamberger-overlay">
+    </div>
+    <!-- --------------------------Header Page---------------------------- -->
+    <section class="header--page">
+        <nav class="navbar">
+            <div class="logo--container">
+                <a href="#" class="logo--link-container">
+                     <div class="logo--img-container">
+                         <img src="./images/puzzle-piece.png" alt="">
+                     </div>
+                     <div class="logo--logoName-container">
+                         <h2 class="logo--logoName-container-title">
+                              Quize App
+                         </h2>
+                     </div>
+                </a>
+            </div>
+
+            <div class="menu--container">
+                <ul>
+                    <li><a href="#" class="menu-link active-link">Home</a></li>
+                    <li><a href="#categories" class="menu-link">Categories</a></li>
+                    <li><a href="#footer" class="menu-link">About</a></li>
+                    <li><a href="#contactForm" class="menu-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="hambergur">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+        </nav>
+
+
+
+        <div class="main-page">
+            <div class="left">
+                  <h2 class="main-heading">
+                         Start Practice & GROW 
+                  </h2>
+
+                  <!-- <p class="main-page-text">In this site you will get the categories wise quizes. You need to select the category and after that you will get the questions, Let's enjoy the journey.</p> -->
+                  <p class="main-page-text">In this site you will get the categories wise quizes. You need to select category you will directly jump into the quize. </p>
+
+                  <a href="#categories" id="start-quize-btn">Start Quize</a>
+
+            </div>
+            <div class="right">
+                  <img src="./images/undraw_Questions_re_1fy7.svg" alt="">
+            </div>
+        </div>
+    </section>
+    <!----------------------------End Header Page------------------------------>
+
+    <!-- --------------------------Start Categories------------------------- -->
+    <section class="categories" id="categories">
+        <div class="section-heading">
+            <h2>Categories</h2>
+            <p> Here are the different categories of quizes.</p>
+        </div>
+
+        <div class="categories-links-container">
+            <div class="show-less-div">
+                <a href="#quize-questions-section" class="general-knowledge category-link">General Knowledge</a>
+                <a href="#quize-questions-section" class="mathematics category-link">Mathematics</a>
+                <a href="#quize-questions-section" class="history category-link">History</a>
+                <a href="#quize-questions-section" class="geography category-link">Geography</a>
+                <a href="#quize-questions-section" class="english category-link">English</a>
+                <a href="#quize-questions-section" class="physics category-link">Physics</a>
+                <a href="#quize-questions-section" class="chemistry category-link">Chemistry</a>
+                <a href="#quize-questions-section" class="biology category-link">Biology</a>
+
+                <a href="#quize-questions-section" class="os category-link">OS</a>
+                <a href="#quize-questions-section" class="oops category-link">OOPs</a>
+                <a href="#quize-questions-section" class="c-lang category-link">C lang</a>
+                <a href="#quize-questions-section" class="cpp category-link">C++</a>
+            </div>
+
+            <div class="show-more-btn-container" id="show__more__btn">
+                <button style="text-align: center;">Show more</button>
+            </div>
+
+            <div class="show-more-div" id="more-div">
+                <a href="#quize-questions-section" class="dsa category-link">DSA</a>
+                <a href="#quize-questions-section" class="dbms category-link">DBMS</a>
+                <a href="#quize-questions-section" class="daa category-link">DAA</a>
+                <a href="#quize-questions-section" class="os category-link">OS</a>
+                <a href="#quize-questions-section" class="oops category-link">OOPs</a>
+                <a href="#quize-questions-section" class="c-lang category-link">C lang</a>
+                <a href="#quize-questions-section" class="cpp category-link">C++</a>
+                <a href="#quize-questions-section" class="python category-link">Python</a>
+                <a href="#quize-questions-section" class="java category-link">Java</a>
+                <a href="#quize-questions-section" class="html category-link">HTML</a>
+                <a href="#quize-questions-section" class="css category-link">CSS</a>
+                <a href="#quize-questions-section" class="javascript category-link">JavaScript</a>
+            </div>
+        
+            <div class="show-less-btn-container show-more-btn-container" id="show__less__btn">
+                <button>Show less</button>
+            </div>
+            
+        </div>
+    </section>
+    <!-- --------------------------End- Categories------------------------- --->
+
+
+    <!-- --------------------------Quize Questions----------------------- -->
+    <section class="quize-questions-section" id="quize-questions-section">
+        <div class="section-heading">
+            <h2 class="quize-heading">General Knowledge</h2>
+            <p class="quize-heading-text"> Here are the different questions on General Knowledge.</p>
+        </div>
+
+        <div class="questions-container">
+            <!-- <div class="question-container">
+                    <h3 class="question">
+                        <span class="question-number">
+                            1]
+                        </span> 
+
+                        <span>
+                            Who is the prime minister of India ?
+                        </span>
+                        
+                    </h3>
+
+                    <div class="options-container">
+                        <button class="option1 optns"><span class="optns-mark">A]</span> Rahul Gandhi</button>
+                        <button class="option2 optns"><span class="optns-mark">B]</span> Arvind Kejrival</button>
+                        <button class="option3 optns"><span class="optns-mark">C]</span> Narendra Modi</button>
+                        <button class="option4 optns"><span class="optns-mark">D]</span> Amit Shah</button>
+                    </div>
+                </div>
+               --> 
+        </div>
+        
+        <!-- <h2 class="score-txt"></h2> -->
+
+        <div class="submit-btn-container">
+            <button class="submit-test-button">
+                Score
+            </button>
+        </div>
+
+        <div class="more-quizes">
+            <a href="#categories">More Quizes</a>
+        </div>
+    </section>
+
+
+    <section class="contact-form" id="contactForm">
+        <div class="section-heading">
+            <h2>Contact Form</h2>
+            <p> Enter your details to reach me.</p>
+        </div>
+        <div class="after-send-msg">
+            <p>Your details are successfully sent !!</p>
+            <!-- <img src="./images/times-solid.svg"/> -->
+        </div>
+        <form action="">
+            <div class="input-group">
+                <label for="name" >Your Name :</label>
+                <input type="text" name ="name" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="name">Mobile No : </label>
+                <input type="text" name ="name" id="mobile" placeholder="Enter mobile no" required>
+            </div>
+
+            <div class="input-group">
+                <label for="name">Email : </label>
+                <input type="text" name ="name" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="send-btn-container">
+                <button id="send-btn" type="submit">Send</button>
+            </div>
+        </form>
+    </section>
+
+    <div class="note">
+        <marquee behavior="" direction="right">Note : All categories questions are not added yet</marquee>
+    </div>
+
+
+    <footer id="footer">
+        <div class="footer-container">
+             <div class="about" id="about">
+                <h2>About</h2>
+                 In this site you will get the different categories of quizes. You have to click the category link and then you will directly jump into the quize.
+             </div>
+
+             <div class="contact">
+                <h2>Contact</h2>
+                <p class="email">Email : ankuchavhan11@gmail.com</p>
+                <p class="mobile">Mobile No : 7387137596</p>
+             </div>
+
+
+             <div class="social">
+                <h2>Social Icons</h2>
+
+                 <a href="https://www.facebook.com/profile.php?id=100059546014440" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                 <a href="https://github.com/AnkushChavhan7596?tab=repositories" target="_blank"><i class="fab fa-github-square" ></i></a> 
+                 <a href="https://www.linkedin.com/in/ankush-chavhan-424546205/" target="_blank"><i class="fab fa-linkedin" ></i></a>
+                 <a href="https://www.youtube.com/channel/UCX9c4QYmoOumbc57_ZV83GQ" target="_blank"><i class="fab fa-youtube" ></i></a> 
+             </div>
+        </div>     
+
+        <div class="copyright">
+           Copyright <span>&copy;</span>  <span id="year"></span> , made by Ankush Chavhan, All rights are reserved.
+        </div>
+     
+  </footer>
+
+
+    <!-- ------------------------End Quize Questions-------------------- --->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    
+    <script src="./javascript/script1.js"></script>
+
+</body>
+</html>
