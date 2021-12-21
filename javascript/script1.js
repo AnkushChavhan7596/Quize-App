@@ -144,13 +144,13 @@ hambergur_overlay.addEventListener('click',()=>{
 const menuLinks = document.querySelectorAll(".menu-link");
 
 menuLinks.forEach((link)=>{
-    link.addEventListener("click", ()=>{
-       menu_container.classList.toggle("menu-hamb");
-       hambergur_overlay.classList.toggle('hamb-overlay');
+        link.addEventListener("click", ()=>{
+            menu_container.classList.toggle("menu-hamb");
+            hambergur_overlay.classList.remove('hamb-overlay');
 
-       bars.forEach((bar)=>{
-        bar.classList.toggle("active");
-    });
+            bars.forEach((bar)=>{
+                bar.classList.toggle("active");
+        });
     });
 })
 
